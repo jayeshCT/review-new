@@ -1,0 +1,68 @@
+<html>
+
+<head>BootStrap CDN -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+	<div class="main">
+		<h2>{{responseData.title}}</h2>
+  </div>
+  
+
+	<div class="main">
+		<div class="divleft">
+			<img [src]=responseData.imageUrl>
+    </div>
+    
+		<div class="middle details">
+      <p><b>Name :</b> {{responseData.name}} <br>
+      <b>Price: </b>{{responseData.price}}<br>
+      <b>Domain: </b>{{responseData.domain}}<br>
+			<b>Launch Date :</b> {{responseData.createdAt | date:' d MMM,y'}}<br>
+			<b>Last Review Date : </b>{{responseData.latestReviewDate | date:' d MMM,y'}}</p>
+		</div>
+  </div>
+  
+  <div class="main ">
+      <h3 class="middle">Average Score: <b>4.3</b></h3>
+      <h3 class="middle">Total Reviews: <b>{{responseData.reviewCount}}</b></h3>
+    </div>
+
+	<div class="main">
+		<div class="left circular">
+			<h3 class="left">{{responseData.topScores[0].topic}}</h3>
+			<h3 class="left">{{responseData.topScores[0].score}}</h3>
+			<div class="progress">
+				<div class="progress-bar" style="width:92%">92%</div>
+			</div>
+		</div>
+		<div class="left circular">
+			<h3 class="middle">{{responseData.topScores[1].topic}}</h3>
+			<h3 class="middle">{{responseData.topScores[1].score}}</h3>
+			<div class="progress">
+				<div class="progress-bar" style="width:84%">84%</div>
+			</div>
+		</div>
+		<div class="left circular">
+			<h3 class="right">{{responseData.topScores[2].topic}}</h3>
+			<h3 class="right">{{responseData.topScores[2].score}}</h3>
+			<div class="progress">
+				<div class="progress-bar" style="width:84%">84%</div>
+			</div>
+    </div>
+    <div class="left circular">
+        <h3 class="right">{{responseData.topScores[3].topic}}</h3>
+        <h3 class="right">{{responseData.topScores[3].score}}</h3>
+        <div class="progress">
+          <div class="progress-bar" style="width:84%">84%</div>
+        </div>
+      </div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>
