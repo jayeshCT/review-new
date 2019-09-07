@@ -11,10 +11,11 @@ const forceSSL = function () {
         next();
     }
 }
-app.use(express.static(__dirname + '/dist/floating-refuge-53579'));
+app.use(express.static(${__dirname}/review/dist/));
 
-app.get('/*', function (req, res) {
-    res.sendFile(path.join(__dirname + '/dist/floating-refuge-53579/index.html'));
+app.get('*', (req, res) => {
+    res.sendFile(`./review/dist/index.html`); // load the single view file (angular will handle the page changes on the front-end)
+});
 });
 // Start the app by listening on the default
 // Heroku port
