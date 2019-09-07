@@ -11,10 +11,10 @@ const forceSSL = function () {
         next();
     }
 }
-app.use(express.static(__dirname + '/build/'));
+app.use(express.static(__dirname + '/dist/Review'));
 
 app.get('*', function (req, res) {
-    const index = path.join(__dirname, 'build', 'index.html');
+    const index = path.join(__dirname, 'dist', 'Review', 'index.html');
     res.sendFile(index);
   });
 // Start the app by listening on the default
